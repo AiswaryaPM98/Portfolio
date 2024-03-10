@@ -16,10 +16,14 @@ The dataset provided is related to IMDB Movies. A potential problem to investiga
 We have data containing movie name, directors, actors, budget, gross, imdb score etc. I analysed the data in Microsoft Excel and visualised in Power BI. Before analysing I cleaned the data by removing the duplicates.
 
 First I looked into the Genre list and found out which is the Genre in which most of the movies are made.Comedy, Action and Drama are the top 3 genres in the industry. Now we can check the IMDB scores on specific genres.
+
 ![image](https://github.com/AiswaryaPM98/Portfolio/assets/149407441/54eb71bc-4549-482a-8601-8e8e1a6618d3)
-|![image](https://github.com/AiswaryaPM98/Portfolio/assets/149407441/5add5f86-c335-4903-ba8e-e6de973b671e)|![image](https://github.com/AiswaryaPM98/Portfolio/assets/149407441/da7b4e38-5327-4ccb-b755-f21f5463a5ff)|
+
+
+|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/5add5f86-c335-4903-ba8e-e6de973b671e" width="300" height="200"/>|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/da7b4e38-5327-4ccb-b755-f21f5463a5ff" width="300" height="200"/>|
 |----|----|
-|![image](https://github.com/AiswaryaPM98/Portfolio/assets/149407441/b8f86415-71b1-4400-880c-f82637a04a70)|![image](https://github.com/AiswaryaPM98/Portfolio/assets/149407441/9e2d9b3d-0261-4d38-b429-0617b6fb7e06)|
+|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/b8f86415-71b1-4400-880c-f82637a04a70" width="300" height="200"/>|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/9e2d9b3d-0261-4d38-b429-0617b6fb7e06" width="300" height="200"/>|
+
 
 Eventhough most of the movies are made in Action, Comedy and Drama genre, the highest imdb scores are for the genre History, Documentary and Biography. Mostly the films in this genre are not commercial filims. The highest ImDB scores indicate the quality of the filim. 
 
