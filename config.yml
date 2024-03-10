@@ -3,3 +3,7 @@ theme : jekyll-theme-minimal
 .md-typeset figure img {
     display: block;
 }
+docs_dir: ./src
+theme:
+  name: material
+  custom_dir: src/.overrides
