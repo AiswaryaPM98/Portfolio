@@ -1,2 +1,5 @@
 title : Aiswarya P M
 theme : jekyll-theme-minimal
+.md-typeset figure img {
+    display: block;
+}
