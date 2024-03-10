@@ -28,10 +28,9 @@ First I looked into the Genre list and found out which is the Genre in which mos
 Eventhough most of the movies are made in Action, Comedy and Drama genre, the highest imdb scores are for the genre History, Documentary and Biography. Mostly the films in this genre are not commercial filims. The highest ImDB scores indicate the quality of the filim. 
 
 Now lets look into the influence of directors. Here many directors have an average IMDB Scores above 8.5. When we dive deep into the relation between budget, profit and IMDB Scores its clear that budget have no relation with IMDB score. They are not correlated. We can see scenarios where high budget films have low profit and IMDB Scores. It is evident that films with IMDB Score above 8.5 have mighest profit. Also films in the genre Musical, family, animation, horror have more profit than other genre.
-|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/9877d166-70a4-411c-9f23-11b30a4d039c" width="500" height="200">|<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/f743b589-9e56-4ef7-b314-b375c06c4ebd" width="400" height="200">|
-|----|----|
 
-
+<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/9877d166-70a4-411c-9f23-11b30a4d039c" width="500" height="200">
+<img src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/f743b589-9e56-4ef7-b314-b375c06c4ebd" width="400" height="200">
 
 We can check the budget and profit relation with respect to each genre using an interactive report. [Report](https://app.powerbi.com/links/nywHjCcYKB?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare&bookmarkGuid=7e0475a0-11d5-48a6-872f-cfab11f6d092)
 
