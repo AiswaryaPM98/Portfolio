@@ -14,11 +14,11 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ### 1. AD Campaign Analysis
 This is a project that I worked on as part of internship. Here we have data of various advertisement campaign the company did for the clients. As a part of digital marketing the data includes the cities, device used, clicks, impression, click through rate (CTR), average cost per click (CPC), conversions, cost per conversion, conversion rate and Absolute top impression. I was assigned to analyse the data and create a dashboard. Here I used Power Bi for analysis.
 
-[Link to the Interactive report of this analysis.](https://app.powerbi.com/links/sVtLZxGUp1?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare)
-
 <img width="578" alt="campaign dash" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3b27eb83-53ce-41bb-bbdf-ec51c62bb474">
 
-What I found out from the analysis :
+[Link to the Interactive report of this analysis.](https://app.powerbi.com/links/sVtLZxGUp1?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare)
+
+**What I found out from the analysis :**
 1. Digital marketing reaches out mostly via mobile phones. Marketing through social medias can reach out to more customers.
 2. TT Air Ambulance UAE Ad created highest impressions and Kuwait Ad had the least Impressions.
 3. Kuwait Ad impression rate should be elevated to reach more customers. It had least to no impressions in the year 2023.
@@ -33,6 +33,10 @@ What I found out from the analysis :
    | UAE AD | 0.97 | 4 |
 
 5. The TT Air Ambulance AD Saudi, UAE, Baharin and Qatar AD had a spike in the conversion trend line in the month of June and July 2023. We have to check whether there is any specific reason for such occurence or not.
+
+Through this project I got to learn about the marketing field which is entirely new for me. The terms impressions, click through rate and cost per click was new for me. Used charts and measures for analysis. Also created an ineractive dashboard and presented my findings to the team.
+
+Thank You.
 
    
    
@@ -72,6 +76,10 @@ We can check the budget and profit relation with respect to each genre using an 
 •	Budget and Earnings of a film is not at all connected to each other.
 
 Quality of the film matters more than anything no matter how much the budget is. Those directors make only few films. Films from other genre apart from common genre like drama comedy, action scores high in IMDB. For commercial profit comedy, adventure and action would be best.
+
+In this project I learnt advanced function of excel to analyse this data and used power bi to visualise thefindings more effectively.
+
+Thank You.
 
 ---
 
