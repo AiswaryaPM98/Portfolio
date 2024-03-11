@@ -7,10 +7,8 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ---
 
 ### Table Of Contents
-| Name | Tools Used |
-|---|---|
-| 1. [AD Campaign Analysis](#AD-Campaign-Analysis) | Power BI |
-| 2. [Movie Analysis](#Movie-Analysis) | Excel, Power BI |
+1. [AD Campaign Analysis](#AD-Campaign-Analysis) - Power BI
+2. [Movie Analysis](#Movie-Analysis) - Excel, Power BI 
 
 ---
 ### 1. AD Campaign Analysis
@@ -19,6 +17,8 @@ This is a project that I worked on as part of internship. Here we have data of v
 <img src ="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/c597d15a-da9f-4502-b217-8aa15bd977a5" width="500" height="300" >
 
 [Link to the Interactive report of this analysis.](https://app.powerbi.com/links/sVtLZxGUp1?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare)
+
+
 
 
 
