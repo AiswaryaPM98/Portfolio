@@ -7,9 +7,9 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ---
 
 ### Table Of Contents
-[AD Campaign Analysis](#AD-Campaign-Analysis) - Power BI
+1. [AD Campaign Analysis](#ad-campaign-analysis) - Power BI
 
-[Movie Analysis](#Movie-Analysis) - Excel, Power BI 
+2. [Movie Analysis](#movie-analysis) - Excel, Power BI 
 
 ---
 ### AD Campaign Analysis
