@@ -14,9 +14,15 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ### 1. AD Campaign Analysis
 This is a project that I worked on as part of internship. Here we have data of various advertisement campaign the company did for the clients. As a part of digital marketing the data includes the cities, device used, clicks, impression, click through rate (CTR), average cost per click (CPC), conversions, cost per conversion, conversion rate and Absolute top impression. I was assigned to analyse the data and create a dashboard. Here I used Power Bi for analysis.
 
-<img src ="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/c597d15a-da9f-4502-b217-8aa15bd977a5" width="500" height="300" >
-
 [Link to the Interactive report of this analysis.](https://app.powerbi.com/links/sVtLZxGUp1?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare)
+
+<img width="578" alt="campaign dash" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3b27eb83-53ce-41bb-bbdf-ec51c62bb474">
+
+What I found out from the analysis :
+1. Digital marketing reaches out mostly via mobile phones and computer.
+2. 
+
+
 
 
 
