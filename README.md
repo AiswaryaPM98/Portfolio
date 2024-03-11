@@ -19,14 +19,23 @@ This is a project that I worked on as part of internship. Here we have data of v
 <img width="578" alt="campaign dash" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3b27eb83-53ce-41bb-bbdf-ec51c62bb474">
 
 What I found out from the analysis :
-1. Digital marketing reaches out mostly via mobile phones and computer.
-2. | AD | Clicks from impression (%) | Conversion from clicks (%) |
+1. Digital marketing reaches out mostly via mobile phones
+2. TT Air Ambulance UAE Ad created highest impressions and Kuwait Ad had the least Impressions. Kuwait Ad impression rate should be elevated to reach more customers.
+3. This table shows the percent of clicks each ad got from impression and the prcent of clicks which were converted. An ad is successfull when the more clicks get converted. Kuwait ad got more clicks but low conversion whereas Qatar Ad got 0.94% clicks and 8.50 % was converted. Only the Qatar ad had the ability to convert those clicks. Here Qatar ad was succesfull that others.
+   
+    | AD | Clicks from impression (%) | Conversion from clicks (%) |
    |---|---|---|
    | Baharin AD | 1.10 | 2.80 |
    | Kuwait AD | 10.84 | 2.07 |
    | Qatar AD | 0.94 | 8.50 |
    | Saudi AD | 2.55 | 3.30 |
-   | UAR AD | 0.97 | 4 |
+   | UAE AD | 0.97 | 4 |
+
+4. 
+
+
+
+   
 
 
 
