@@ -20,7 +20,13 @@ This is a project that I worked on as part of internship. Here we have data of v
 
 What I found out from the analysis :
 1. Digital marketing reaches out mostly via mobile phones and computer.
-2. 
+2. | AD | Clicks from impression (%) | Conversion from clicks (%) |
+   |---|---|---|
+   | Baharin AD | 1.10 | 2.80 |
+   | Kuwait AD | 10.84 | 2.07 |
+   | Qatar AD | 0.94 | 8.50 |
+   | Saudi AD | 2.55 | 3.30 |
+   | UAR AD | 0.97 | 4 |
 
 
 
