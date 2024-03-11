@@ -19,9 +19,10 @@ This is a project that I worked on as part of internship. Here we have data of v
 <img width="578" alt="campaign dash" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3b27eb83-53ce-41bb-bbdf-ec51c62bb474">
 
 What I found out from the analysis :
-1. Digital marketing reaches out mostly via mobile phones
-2. TT Air Ambulance UAE Ad created highest impressions and Kuwait Ad had the least Impressions. Kuwait Ad impression rate should be elevated to reach more customers.
-3. This table shows the percent of clicks each ad got from impression and the prcent of clicks which were converted. An ad is successfull when the more clicks get converted. Kuwait ad got more clicks but low conversion whereas Qatar Ad got 0.94% clicks and 8.50 % was converted. Only the Qatar ad had the ability to convert those clicks. Here Qatar ad was succesfull that others.
+1. Digital marketing reaches out mostly via mobile phones. Marketing through social medias can reach out to more customers.
+2. TT Air Ambulance UAE Ad created highest impressions and Kuwait Ad had the least Impressions.
+3. Kuwait Ad impression rate should be elevated to reach more customers. It had least to no impressions in the year 2023.
+4. This table shows the percent of clicks each ad got from impression and the prcent of clicks which were converted. An ad is successfull when the more clicks get converted. Kuwait ad got more clicks but low conversion whereas Qatar Ad got 0.94% clicks and 8.50 % was converted. Only the Qatar ad had the ability to convert those clicks. Here Qatar ad was succesfull that others.
    
     | AD | Clicks from impression (%) | Conversion from clicks (%) |
    |---|---|---|
@@ -31,18 +32,8 @@ What I found out from the analysis :
    | Saudi AD | 2.55 | 3.30 |
    | UAE AD | 0.97 | 4 |
 
-4. 
-
-
-
+5. The TT Air Ambulance AD Saudi, UAE, Baharin and Qatar AD had a spike in the conversion trend line in the month of June and July 2023. We have to check whether there is any specific reason for such occurence or not.
    
-
-
-
-
-
-
-
 ---
 ### 2. Movie Analysis
 The dataset provided is related to IMDB Movies. A potential problem to investigate could be: "What factors influence the success of a movie on IMDB?" Here, success can be defined by high IMDB ratings. The impact of this problem is significant for movie producers, directors, and investors who want to understand what makes a movie successful to make informed decisions in their future projects. The data source is google.
