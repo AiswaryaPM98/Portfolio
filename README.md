@@ -9,14 +9,19 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ### Table Of Contents
 | Name | Tools Used |
 |---|---|
-| 1.[AD Campaign Analysis](#AD-Campaign-Analysis) | Power BI |
-| 2.[Movie Analysis](#Movie-Analysis) | Excel, Power BI |
+| 1. [AD Campaign Analysis](#AD-Campaign-Analysis) | Power BI |
+| 2. [Movie Analysis](#Movie-Analysis) | Excel, Power BI |
 
 ---
-## AD Campaign Analysis
+### 1. AD Campaign Analysis
+This is a project that I worked on as part of internship. Here we have data of various advertisement campaign the company did for the clients. As a part of digital marketing the data includes the cities, device used, clicks, impression, click through rate (CTR), average cost per click (CPC), conversions, cost per conversion, conversion rate and Absolute top impression. I was assigned to analyse the data and create a dashboard. Here I used Power Bi for analysis.
+
+[Link to the Interactive report of this analysis.](https://app.powerbi.com/links/sVtLZxGUp1?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare)
 
 
-### Movie Analysis
+
+---
+### 2. Movie Analysis
 The dataset provided is related to IMDB Movies. A potential problem to investigate could be: "What factors influence the success of a movie on IMDB?" Here, success can be defined by high IMDB ratings. The impact of this problem is significant for movie producers, directors, and investors who want to understand what makes a movie successful to make informed decisions in their future projects. The data source is google.
 
 We have data containing movie name, directors, actors, budget, gross, imdb score etc. I analysed the data in Microsoft Excel and visualised in Power BI. Before analysing I cleaned the data by removing the duplicates.
