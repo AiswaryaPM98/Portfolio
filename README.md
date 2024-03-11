@@ -7,9 +7,24 @@ Eager mathematics graduate seeking to apply advanced statistical analysis, data 
 ---
 
 ### Table Of Contents
-[Movie Analysis](#Movie-Analysis) (Excel, Power BI)
+1.[Operation Analytics and Investigating Metric Spike](#Operation-Analytics-and-Investigating-Metric-Spike) (SQL)
+
+2.[Movie Analysis](#Movie-Analysis) (Excel, Power BI)
 
 ---
+## Operation Analytics and Investigating Metric Spike
+
+This project focuses on analyzing the data which is provided by company. My task is to derive insights and answer the questions asked by different departments. So that these insights are then used by marketing team, etc to predict the overall growth or decline of a company’s automation, better understanding between cross-functional teams, and more effective workflow.
+
+This project is developed using SQL Workbench.
+We have various questions to answer.
+
+1. Calculate the number of jobs reviewed per hour per day for November 2020?
+   
+``` sql code
+
+
+```
 ### Movie Analysis
 The dataset provided is related to IMDB Movies. A potential problem to investigate could be: "What factors influence the success of a movie on IMDB?" Here, success can be defined by high IMDB ratings. The impact of this problem is significant for movie producers, directors, and investors who want to understand what makes a movie successful to make informed decisions in their future projects. The data source is google.
 
@@ -47,6 +62,7 @@ We can check the budget and profit relation with respect to each genre using an 
 Quality of the film matters more than anything no matter how much the budget is. Those directors make only few films. Films from other genre apart from common genre like drama comedy, action scores high in IMDB. For commercial profit comedy, adventure and action would be best.
 
 ---
+
 
 
 
