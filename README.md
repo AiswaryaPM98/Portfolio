@@ -33,6 +33,8 @@ What I found out from the analysis :
    | UAE AD | 0.97 | 4 |
 
 5. The TT Air Ambulance AD Saudi, UAE, Baharin and Qatar AD had a spike in the conversion trend line in the month of June and July 2023. We have to check whether there is any specific reason for such occurence or not.
+
+   
    
 ---
 ### 2. Movie Analysis
