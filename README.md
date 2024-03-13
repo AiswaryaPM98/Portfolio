@@ -25,7 +25,7 @@ This is a project that I worked on as part of internship. Here we have data of v
 3. Kuwait Ad impression rate should be elevated to reach more customers. It had least to no impressions in the year 2023.
 4. This table shows the percent of clicks each ad got from impression and the prcent of clicks which were converted. An ad is successfull when the more clicks get converted. Kuwait ad got more clicks but low conversion whereas Qatar Ad got 0.94% clicks and 8.50 % was converted. Only the Qatar ad had the ability to convert those clicks. Here Qatar ad was succesfull that others.
    
-    | AD | Clicks from impression (%) | Conversion from clicks (%) |
+    | AD | Click Through Rate (%) | Conversion Rate (%) |
    |---|---|---|
    | Baharin AD | 1.10 | 2.80 |
    | Kuwait AD | 10.84 | 2.07 |
