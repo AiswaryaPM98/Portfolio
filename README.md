@@ -22,7 +22,7 @@ This is a project that I worked on as part of internship. Here we have data of v
 **What I found out from the analysis :**
 1. Digital marketing reaches out mostly via mobile phones. Marketing through social medias can reach out to more customers.
 2. TT Air Ambulance UAE Ad created highest impressions and Kuwait Ad had the least Impressions.
-3. Kuwait Ad Baharin Ad impression rate should be elevated to reach more customers. It had least to no clicks in the year 2023.
+3. Kuwait Ad and Baharin Ad impression rate should be elevated to reach more customers. It had least to no clicks in the year 2023.
 4. This table shows the percent of clicks each ad got from impression and the prcent of clicks which were converted. An ad is successfull when the more clicks get converted. Kuwait ad got more clicks but low conversion whereas Qatar Ad got 0.94% clicks and 8.50 % was converted. Only the Qatar ad had the ability to convert those clicks. Here Qatar ad was succesfull that others.
    
     | AD | Click Through Rate (%) | Conversion Rate (%) |
