@@ -1,8 +1,12 @@
-# Portfolio
-## Aiswarya P M
-### Data Analyst
 
-Eager mathematics graduate seeking to apply advanced statistical analysis, data visualization, and communication skills in a Data Analytics role to drive actionable insights for business improvement.
+# Aiswarya P M
+## Data Analyst
+
+I am Aiswarya P M from Kerala. With a solid educational background in Mathematics, complemented by recent hands-on training and certification in Google Data Analytics, I am eager to leverage my skills and experience to contribute to your team and drive business improvement through actionable insights.
+
+During my tenure as a Data Analyst Intern at Titan Tech Emirates Pvt Ltd, I gained practical experience in collecting, cleaning, and analyzing data from diverse sources. I collaborated closely with the data analytics team to conduct exploratory data analysis, develop visualizations, and generate insightful reports for stakeholders. My role also involved interpreting analysis results and providing recommendations to enhance business processes, demonstrating my ability to translate data into valuable insights.
+
+I am experienced in SQL for data manipulation and analysis, and I am also familiar with tools such as Tableau, R, and Power BI, enabling me to effectively analyze and visualize data to drive informed decision-making. My educational background includes a Master's degree in Mathematics and a Bachelor's degree in Mathematics with Statistics, reflecting my commitment to quantitative analysis and data-driven decision-making.
 
 ---
 
