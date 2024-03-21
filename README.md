@@ -59,7 +59,8 @@ having count(*)>1 ;
 
 
 
-``` jobs reviewed
+```
+ jobs reviewed
 SELECT ds as Dates, Round((count(job_id)/sum(time_spent))*3600) as Jobs_Reviewed_per_hour
 FROM operational_analysis.job_data
 group by ds;
