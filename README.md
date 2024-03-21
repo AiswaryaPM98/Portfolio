@@ -87,7 +87,7 @@ FROM operational_analysis.job_data;
 
 
 
-``` Rolling Avg
+``` 
 select ds as Date, round(count(event)/sum(time_spent),2) as Daily_Throughput,
 avg(count(event)/sum(time_spent)) over (order by ds desc ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS Rolling_Avg
 FROM operational_analysis.job_data
@@ -149,13 +149,12 @@ group by Week_Number;
 ```
 
 
+
  <img width="176" alt="7" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3e11308e-118a-46b5-af18-921806146457">
 
 
 
 Users were mostly engaged in the weeks : 
-
-
 
 <img width="175" alt="8" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/93554dc1-5ea5-4883-a731-1a04fc4979bb">
 
@@ -250,12 +249,13 @@ order by Start_Week;
 
 
 
-```devices used
+```
 select device, count(device) as count
 from operational_analysis.events
 group by device
 order by count desc;
 ```
+
 
 
 
