@@ -79,6 +79,10 @@ order by ds;
 
 Daily Throughput and rolling average is highest on 28-11-2020. Rolling metrics helps us to show if the metrics is going up or down as the values changes on daily, weekly, monthly or yearly basis.
 
+3. Percentage share of each language : Share of each language for different contents.
+
+   
+
 
 ---
 ### Marketing AD Campaign Analysis
