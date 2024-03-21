@@ -37,7 +37,7 @@ In case study 2 the insights are found based on following questions :
 
 This project is developed using SQL. First , created a database using the file and loaded the data into SQL Workbench. Then analysed the data.
 
-Case Study 1 :
+**Case Study 1 :**
 
 To check the duplicate:
 
