@@ -41,22 +41,31 @@ Case Study 1 :
 
 To check the duplicate:
 
+
 ``` duplicates
 SELECT actor_id, COUNT(*) as Duplicates
 FROM operational_analysis.job_data
 group by actor_id
 having count(*)>1 ;
 ```
+
+
 <img width="116" alt="1" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/99cf374d-c196-40db-b2d4-655cc1cd047b">
 
 
+
+
 1. Number of jobs reviewed: Amount of jobs reviewed over time :
+
+
 
 ``` jobs reviewed
 SELECT ds as Dates, Round((count(job_id)/sum(time_spent))*3600) as Jobs_Reviewed_per_hour
 FROM operational_analysis.job_data
 group by ds;
 ```
+
+
 <img width="180" alt="2" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/28852d99-9869-4a33-a255-a4693869bdf2">
 
 
@@ -64,12 +73,18 @@ Max no. of jobs were reviewed on 28-11-2020 and minimum jobs were reviewed on 27
 
 2. Throughput : Calculate 7 day rolling average of throughput? For throughput, do you prefer metric or 7-day rolling and why?
 
+
+
 ``` average
 select round(count(event)/sum(time_spent),2) as Weekly_Throughput
 FROM operational_analysis.job_data;
 ```
 
+
+
 <img width="106" alt="3" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/a7a68afc-ad89-4486-9467-3f720331e985">
+
+
 
 ``` Rolling Avg
 select ds as Date, round(count(event)/sum(time_spent),2) as Daily_Throughput,
@@ -79,19 +94,28 @@ group by ds
 order by ds;
 ```
 
+
+
 <img width="203" alt="4" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3895a0ef-2079-4e08-a6c8-868f66f2a476">
+
 
 
 Daily Throughput and rolling average is highest on 28-11-2020. Rolling metrics helps us to show if the metrics is going up or down as the values changes on daily, weekly, monthly or yearly basis.
 
 3. Percentage share of each language : Share of each language for different contents.
 
+
+
 ```
 Select count(*) as Total_Count
 from operational_analysis.job_data;
 ```
 
+
+
 <img width="77" alt="5" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/34417d9e-524a-40bc-83fb-6f5b00a0902f">
+
+
 
 ```
 select languages,round((count(languages)/9) * 100,2) as Percent
@@ -100,13 +124,21 @@ group by languages
 order by Percent desc;
 ```
 
+
+
 <img width="112" alt="6" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/cd118e29-f62a-4986-a071-c8b49d7b259f">
+
+
 
 Persian is the most used language here.
 
 Case Study 2 :
 
+
+
 1. User Engagement : To measure the activeness of a user.
+
+
 ```
 select extract(week from occured_at) as Week_Number ,
 count(distinct user_id) as Weekly_Active_Users
@@ -114,13 +146,23 @@ from operational_analysis.events
 where event_type = 'engagement'
 group by Week_Number;
 ```
+
+
  <img width="176" alt="7" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3e11308e-118a-46b5-af18-921806146457">
+
+
 
 Users were mostly engaged in the weeks : 
 
+
+
 <img width="175" alt="8" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/93554dc1-5ea5-4883-a731-1a04fc4979bb">
 
+
+
 2. User Growth : Amount of users growing over time for a product.
+
+
 
 ```
 select extract(month from Created_Date) as Months, count(Activated_date) as Users
@@ -133,13 +175,23 @@ group by 1
 order by 1;
 ```
 
+
+
 Inner query changed the datetime to date only format.
+
+
 
 <img width="363" alt="9" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/13fb586c-8224-4810-9916-ee234af34b49"> <img width="89" alt="10" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/ab9cec18-4c96-4773-a448-0f1c1a44e684">
 
+
+
 The user growth increases by month and by june, july, august the growth is at peak.After August growth drops.
 
+
+
 3. Weekly Retention : Users getting retained weekly after signing up for  aproduct.
+
+
 
 ```
 select Start_Week as Week,
@@ -187,9 +239,15 @@ group by Start_Week
 order by Start_Week;
 ```
 
+
+
 <img width="753" alt="11" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/23f1144f-b398-4dfe-a147-d3baba26e1fb">
 
+
+
 4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
+
+
 
 ```devices used
 select device, count(device) as count
@@ -198,7 +256,11 @@ group by device
 order by count desc;
 ```
 
+
+
 <img width="152" alt="12" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/73f723d6-fd94-4ced-89ff-aa963b45bd9e">
+
+
 
 ```
 select extract(week from(convert(occured_at, date))) as Week_Number,
@@ -234,13 +296,23 @@ group by 1
 order by 1;
 ```
 
+
+
 <img width="749" alt="13" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/234214eb-608d-46b9-bd9c-bf155673aaf3">
+
+
 
 <img width="707" alt="14" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/09086d80-a1b1-4795-9db8-8daf4bca6a39">
 
+
+
 <img width="413" alt="15" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/2c937814-008d-406d-8467-4c3e0acbf701">
 
+
+
 5. Email Engagement : User engaging with email service.
+
+
 
 ```
 select Week,
@@ -261,7 +333,11 @@ group by 1
 order by 1;
 ```
 
+
+
 <img width="435" alt="16" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/8f0aec67-f6c4-412c-be94-a8c86a1eb3ec">
+
+
 
 <img width="429" alt="17" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/b11d9872-2330-483b-87a2-13644189a461">
 
