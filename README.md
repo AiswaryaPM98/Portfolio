@@ -402,7 +402,7 @@ Now lets look into the influence of directors. Here many directors have an avera
 
 We can check the budget and profit relation with respect to each genre using an interactive report. [Report](https://app.powerbi.com/links/nywHjCcYKB?ctid=48982c93-be9a-4edc-b6c3-23c9093d7403&pbi_source=linkShare&bookmarkGuid=7e0475a0-11d5-48a6-872f-cfab11f6d092)
 
-**Conclusion :**
+**My Findings:**
 
 •	Mostly commercial films are made in the genre comedy, action and drama. Most profited genre is adventure. 
 
