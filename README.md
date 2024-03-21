@@ -55,7 +55,7 @@ having count(*)>1 ;
 
 
 
-1. Number of jobs reviewed: Amount of jobs reviewed over time :
+**Number of jobs reviewed: Amount of jobs reviewed over time :**
 
 
 
@@ -71,7 +71,7 @@ group by ds;
 
 Max no. of jobs were reviewed on 28-11-2020 and minimum jobs were reviewed on 27-11-2020.
 
-2. Throughput : Calculate 7 day rolling average of throughput? For throughput, do you prefer metric or 7-day rolling and why?
+**Throughput : Calculate 7 day rolling average of throughput? For throughput, do you prefer metric or 7-day rolling and why?**
 
 
 
@@ -102,7 +102,7 @@ order by ds;
 
 Daily Throughput and rolling average is highest on 28-11-2020. Rolling metrics helps us to show if the metrics is going up or down as the values changes on daily, weekly, monthly or yearly basis.
 
-3. Percentage share of each language : Share of each language for different contents.
+**Percentage share of each language : Share of each language for different contents.**
 
 
 
@@ -132,11 +132,11 @@ order by Percent desc;
 
 Persian is the most used language here.
 
-Case Study 2 :
+**Case Study 2 :**
 
 
 
-1. User Engagement : To measure the activeness of a user.
+**User Engagement : To measure the activeness of a user.**
 
 
 ```
@@ -158,8 +158,7 @@ Users were mostly engaged in the weeks :
 <img width="175" alt="8" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/93554dc1-5ea5-4883-a731-1a04fc4979bb">
 
 
-
-2. User Growth : Amount of users growing over time for a product.
+**User Growth : Amount of users growing over time for a product.**
 
 
 
@@ -188,7 +187,7 @@ The user growth increases by month and by june, july, august the growth is at pe
 
 
 
-3. Weekly Retention : Users getting retained weekly after signing up for  aproduct.
+**Weekly Retention : Users getting retained weekly after signing up for  aproduct.**
 
 
 
@@ -244,7 +243,7 @@ order by Start_Week;
 
 
 
-4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
+**Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.**
 
 
 
@@ -310,7 +309,7 @@ order by 1;
 
 
 
-5. Email Engagement : User engaging with email service.
+**Email Engagement : User engaging with email service.**
 
 
 
