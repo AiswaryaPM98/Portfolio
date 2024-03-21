@@ -29,7 +29,7 @@ In case study 1 the insights are found on following question:
 3. Percentage share of each language : Share of each language for different contents.
 
 In case study 2 the insights are found based on following questions :
-1. User Engagement : To measure the activeness of a user. measuring if the user finds quality product/services.
+1. User Engagement : To measure the activeness of a user.
 2. User Growth : Amount of users growing over time for a product.
 3. Weekly Retention : Users getting retained weekly after signing up for  aproduct.
 4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
@@ -104,9 +104,94 @@ order by Percent desc;
 
 Persian is the most used language here.
 
+Case Study 2 :
 
-   
+1. User Engagement : To measure the activeness of a user.
+```
+select extract(week from occured_at) as Week_Number ,
+count(distinct user_id) as Weekly_Active_Users
+from operational_analysis.events
+where event_type = 'engagement'
+group by Week_Number;
+```
+ <img width="176" alt="7" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3e11308e-118a-46b5-af18-921806146457">
 
+Users were mostly engaged in the weeks : 
+
+<img width="175" alt="8" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/93554dc1-5ea5-4883-a731-1a04fc4979bb">
+
+2. User Growth : Amount of users growing over time for a product.
+
+```
+select extract(month from Created_Date) as Months, count(Activated_date) as Users
+from(
+select 
+convert (created_at, DATE) as Created_Date,
+convert (activated_at, DATE) as Activated_Date
+from operational_analysis.users_1) as date_change
+group by 1
+order by 1;
+```
+
+Inner query changed the datetime to date only format.
+
+<img width="363" alt="9" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/13fb586c-8224-4810-9916-ee234af34b49"> <img width="89" alt="10" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/ab9cec18-4c96-4773-a448-0f1c1a44e684">
+
+The user growth increases by month and by june, july, august the growth is at peak.After August growth drops.
+
+3. Weekly Retention : Users getting retained weekly after signing up for  aproduct.
+
+```
+select Start_Week as Week,
+sum(case when Week_Number = 0 then 1 else 0 end) as Week_0,
+sum(case when Week_Number = 1 then 1 else 0 end) as Week_1,
+sum(case when Week_Number = 2 then 1 else 0 end) as Week_2,
+sum(case when Week_Number = 3 then 1 else 0 end) as Week_3,
+sum(case when Week_Number = 4 then 1 else 0 end) as Week_4,
+sum(case when Week_Number = 5 then 1 else 0 end) as Week_5,
+sum(case when Week_Number = 6 then 1 else 0 end) as Week_6,
+sum(case when Week_Number = 7 then 1 else 0 end) as Week_7,
+sum(case when Week_Number = 8 then 1 else 0 end) as Week_8,
+sum(case when Week_Number = 9 then 1 else 0 end) as Week_9,
+sum(case when Week_Number = 10 then 1 else 0 end) as Week_10,
+sum(case when Week_Number = 11 then 1 else 0 end) as Week_11,
+sum(case when Week_Number = 12 then 1 else 0 end) as Week_12,
+sum(case when Week_Number = 13 then 1 else 0 end) as Week_13,
+sum(case when Week_Number = 14 then 1 else 0 end) as Week_14,
+sum(case when Week_Number = 15 then 1 else 0 end) as Week_15,
+sum(case when Week_Number = 16 then 1 else 0 end) as Week_16,
+sum(case when Week_Number = 17 then 1 else 0 end) as Week_17,
+sum(case when Week_Number = 18 then 1 else 0 end) as Week_18,
+sum(case when Week_Number = 19 then 1 else 0 end) as Week_19,
+sum(case when Week_Number = 20 then 1 else 0 end) as Week_20,
+sum(case when Week_Number = 21 then 1 else 0 end) as Week_21,
+sum(case when Week_Number = 22 then 1 else 0 end) as Week_22,
+sum(case when Week_Number = 23 then 1 else 0 end) as Week_23,
+sum(case when Week_Number = 24 then 1 else 0 end) as Week_24,
+sum(case when Week_Number = 25 then 1 else 0 end) as Week_25,
+sum(case when Week_Number = 26 then 1 else 0 end) as Week_26,
+sum(case when Week_Number = 27 then 1 else 0 end) as Week_27,
+sum(case when Week_Number = 28 then 1 else 0 end) as Week_28,
+sum(case when Week_Number = 29 then 1 else 0 end) as Week_29
+from (
+select m.user_id, m.Login_Week, n.Start_Week, m.Login_Week as Week_Number
+from (
+(select user_id, extract( week from(convert(occured_at, date))) as Login_Week
+from operational_analysis.events
+group by 1, 2) as m ,
+(select user_id, min(extract(week from(convert(occured_at, date)))) as Start_Week
+from operational_analysis.events
+group by 1) as n )
+where m.user_id = n.user_id ) as Retention
+group by Start_Week
+order by Start_Week;
+```
+
+<img width="753" alt="11" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/23f1144f-b398-4dfe-a147-d3baba26e1fb">
+
+
+4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
+5. Email Engagement : User engaging with email service.
 
 ---
 ### Marketing AD Campaign Analysis
