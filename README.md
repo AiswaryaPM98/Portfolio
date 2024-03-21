@@ -76,7 +76,7 @@ Max no. of jobs were reviewed on 28-11-2020 and minimum jobs were reviewed on 27
 
 
 
-``` average
+```
 select round(count(event)/sum(time_spent),2) as Weekly_Throughput
 FROM operational_analysis.job_data;
 ```
