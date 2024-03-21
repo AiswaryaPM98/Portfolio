@@ -265,8 +265,10 @@ order by 1;
 
 <img width="429" alt="17" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/b11d9872-2330-483b-87a2-13644189a461">
 
-**Result:**
-This project helped me to understand the importance of operation analytics. I am able to understand how compannies use the metric spike to leverage insights to make data driven decisions.
+
+
+
+This project helped me to understand the importance of operation analytics. I am able to understand how companies use the metric spike to leverage insights to make data driven decisions.
 
 
 
