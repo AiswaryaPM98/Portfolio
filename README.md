@@ -37,6 +37,8 @@ In case study 2 the insights are found based on following questions :
 
 This project is developed using SQL. First , created a database using the file and loaded the data into SQL Workbench. Then analysed the data.
 
+Case Study 1 :
+
 To check the duplicate:
 
 ``` duplicates
@@ -47,6 +49,7 @@ having count(*)>1 ;
 ```
 <img width="116" alt="1" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/99cf374d-c196-40db-b2d4-655cc1cd047b">
 
+
 1. Number of jobs reviewed: Amount of jobs reviewed over time :
 
 ``` jobs reviewed
@@ -55,6 +58,7 @@ FROM operational_analysis.job_data
 group by ds;
 ```
 <img width="180" alt="2" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/28852d99-9869-4a33-a255-a4693869bdf2">
+
 
 Max no. of jobs were reviewed on 28-11-2020 and minimum jobs were reviewed on 27-11-2020.
 
@@ -77,9 +81,29 @@ order by ds;
 
 <img width="203" alt="4" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3895a0ef-2079-4e08-a6c8-868f66f2a476">
 
+
 Daily Throughput and rolling average is highest on 28-11-2020. Rolling metrics helps us to show if the metrics is going up or down as the values changes on daily, weekly, monthly or yearly basis.
 
 3. Percentage share of each language : Share of each language for different contents.
+
+```
+Select count(*) as Total_Count
+from operational_analysis.job_data;
+```
+
+<img width="77" alt="5" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/34417d9e-524a-40bc-83fb-6f5b00a0902f">
+
+```
+select languages,round((count(languages)/9) * 100,2) as Percent
+from operational_analysis.job_data
+group by languages
+order by Percent desc;
+```
+
+<img width="112" alt="6" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/cd118e29-f62a-4986-a071-c8b49d7b259f">
+
+Persian is the most used language here.
+
 
    
 
