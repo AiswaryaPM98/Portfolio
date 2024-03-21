@@ -12,12 +12,34 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 ---
 
 ### Table Of Contents
-1. [AD Campaign Analysis](#ad-campaign-analysis) - Power BI
+1. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
 
-2. [Movie Analysis](#movie-analysis) - Excel, Power BI 
+2. [Marketing AD Campaign Analysis](#marketing-ad-campaign-analysis) - Power BI
+
+3. [Movie Analysis](#movie-analysis) - Excel, Power BI 
 
 ---
-### AD Campaign Analysis
+### Operation Analytics and Investigating Metric Spike.
+
+This project focuses on analyzing the data which is provided by company. My task is to derive insights. So that these insights can be used by ops team, suppoert team, marketing team etc to predict the overall growth or decline of a company.We have 2 cases, Job data and users, evnets, email events tables.
+
+In case study 1 the insights are found on following question:
+1. Number of jobs reviewed: Amount of jobs reviewed over time.
+2. Throughput : Calculate 7 day rolling average of throughput? For throughput, do you prefer metric or 7-day rolling and why?
+3. Percentage share of each language : Share of each language for different contents.
+
+In case study 2 the insights are found based on following questions :
+1. User Engagement : To measure the activeness of a user. measuring if the user finds quality product/services.
+2. User Growth : Amount of users growing over time for a product.
+3. Weekly Retention : Users getting retained weekly after signing up for  aproduct.
+4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
+5. Email Engagement : User engaging with email service.
+
+This project is developed using SQL. First , created a database using the file and loaded the data into SQL Workbench. Then analysed the data.
+
+
+---
+### Marketing AD Campaign Analysis
 This is a project that I worked on as part of internship. Here we have data of various advertisement campaign the company did for the clients. As a part of digital marketing the data includes the cities, device used, clicks, impression, click through rate (CTR), average cost per click (CPC), conversions, cost per conversion, conversion rate and Absolute top impression. I was assigned to analyse the data and create a dashboard. Here I used Power Bi for analysis.
 
 <img width="578" alt="campaign dash" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/3b27eb83-53ce-41bb-bbdf-ec51c62bb474">
