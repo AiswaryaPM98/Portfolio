@@ -189,9 +189,86 @@ order by Start_Week;
 
 <img width="753" alt="11" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/23f1144f-b398-4dfe-a147-d3baba26e1fb">
 
-
 4. Weekly Engagement : To measure the activeness of a user. Measuring if the user finds quality in a service weekkly.
+
+```devices used
+select device, count(device) as count
+from operational_analysis.events
+group by device
+order by count desc;
+```
+
+<img width="152" alt="12" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/73f723d6-fd94-4ced-89ff-aa963b45bd9e">
+
+```
+select extract(week from(convert(occured_at, date))) as Week_Number,
+count(distinct case when device in('macbook pro') then user_id else null end) as Macbook_Pro,
+count(distinct case when device in('lenove thinkpad') then user_id else null end) as Lenove_Thinkpad,
+count(distinct case when device in('macbook air') then user_id else null end) as Macbook_Air,
+count(distinct case when device in('iphone 5') then user_id else null end) as Iphone_5,
+count(distinct case when device in('dell inspiron notebook') then user_id else null end) as Dell_Inspiron_Notebook,
+count(distinct case when device in('samsung galaxy s4') then user_id else null end) as Samsung_Galaxy_S4,
+count(distinct case when device in('nexus 5') then user_id else null end) as Nexus_5,
+count(distinct case when device in('iphone 5s') then user_id else null end) as Iphone_5s,
+count(distinct case when device in('dell inspiron desktop') then user_id else null end) as Dell_Inspiron_Desktop,
+count(distinct case when device in('iphone 4s') then user_id else null end) as Iphone_4s,
+count(distinct case when device in('asus chromebook') then user_id else null end) as Asus_Chromebook,
+count(distinct case when device in('ipad air') then user_id else null end) as Ipad_Air,
+count(distinct case when device in('acer aspire notebook') then user_id else null end) as Acer_Aspire_Notebook,
+count(distinct case when device in('hp pavillion desktop') then user_id else null end) as HP_Pavillion_Desktop,
+count(distinct case when device in('nexus 7') then user_id else null end) as Nexus_7,
+count(distinct case when device in('nokia lumia 635') then user_id else null end) as Nokia_Lumia_635,
+count(distinct case when device in('ipad mini') then user_id else null end) as Ipad_Mini,
+count(distinct case when device in('acer aspire desktop') then user_id else null end) as Acer_Aspire_Desktop,
+count(distinct case when device in('mnexus 10') then user_id else null end) as Nexus_10,
+count(distinct case when device in('mac mini') then user_id else null end) as Mac_Mini,
+count(distinct case when device in('htc one') then user_id else null end) as HTC_One,
+count(distinct case when device in('kindle fire') then user_id else null end) as Kindle_Fire,
+count(distinct case when device in('windows surface') then user_id else null end) as Windows_Surface,
+count(distinct case when device in('samsung galaxy note') then user_id else null end) as Samsung_Galaxy_Note,
+count(distinct case when device in('amazon fire phone') then user_id else null end) as Amazon_Fire_Phone,
+count(distinct case when device in('samsung galaxy tablet') then user_id else null end) as Samsung_Galaxy_Tablet
+from operational_analysis.events
+where event_type = 'engagement'
+group by 1
+order by 1;
+```
+
+<img width="749" alt="13" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/234214eb-608d-46b9-bd9c-bf155673aaf3">
+
+<img width="707" alt="14" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/09086d80-a1b1-4795-9db8-8daf4bca6a39">
+
+<img width="413" alt="15" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/2c937814-008d-406d-8467-4c3e0acbf701">
+
 5. Email Engagement : User engaging with email service.
+
+```
+select Week,
+round((Weekly_Digest/Total*100),2) as Weekly_Digest_Rate,
+round((Email_Open/Total*100),2) as Email_Open_Rate,
+round((Email_Clickthrough/Total*100),2) as Email_Clickthrough_Rate,
+round((Reengagement_Emails/Total*100),2) as Reengagement_Emails_Rate
+from (
+select extract(week from(convert(occured_at, date))) as Week,
+count(case when action = 'sent_weekly_digest' then user_id else null end) as Weekly_Digest,
+count(case when action = 'email_open' then user_id else null end) as Email_Open,
+count(case when action = 'email_clickthrough' then user_id else null end) as Email_Clickthrough,
+count(case when action = 'sent_reengagement_email' then user_id else null end) as Reengagement_Emails,
+count(user_id) as Total
+from operational_analysis.email_events
+group by 1) as Email_Engagement_Metrics
+group by 1
+order by 1;
+```
+
+<img width="435" alt="16" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/8f0aec67-f6c4-412c-be94-a8c86a1eb3ec">
+
+<img width="429" alt="17" src="https://github.com/AiswaryaPM98/Portfolio/assets/149407441/b11d9872-2330-483b-87a2-13644189a461">
+
+**Result:**
+This project helped me to understand the importance of operation analytics. I am able to understand how compannies use the metric spike to leverage insights to make data driven decisions.
+
+
 
 ---
 ### Marketing AD Campaign Analysis
