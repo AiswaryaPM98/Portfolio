@@ -41,6 +41,12 @@ outofStock BOOLEAN,
 quantity INTEGER
 );
 ```
+Data Exploration:
+
+```
+SELECT COUNT (*) FROM zepto;
+```
+<img width="277" height="146" alt="image" src="https://github.com/user-attachments/assets/de32fed3-0449-4dfd-91b9-0652f0721b25" />
 
 
 
