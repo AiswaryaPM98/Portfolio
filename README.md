@@ -29,9 +29,13 @@ Zepto Inventory Analysis refers to reviewing and evaluating the stock data of Ze
 Key points in Zepto Inventory Analysis:
 
 Product Availability: Checking which items are in stock, low stock, or out of stock across dark stores.
+
 Demand Patterns: Understanding which products sell fast, which are slow-moving, and identifying seasonal or daily demand trends.
-Stock Accuracy: Ensuring the inventory in the system matches the actual warehouse stock (important for quick deliveries).
+
+Stock Accuracy: Ensuring the inventory in the system matches the actual warehouse stock.
+
 Price & Margin Check: Verifying MRP, selling price and discounts for each product.
+
 Duplicate or Incorrect Entries: Fixing cases where products appear multiple times or have wrong prices/quantities.
 
 To Create a new table named Zepto  with columns as sku id(stock keeping unit), Name, Category, MRP, Discount Percentage, Avaliable Quantity, Discounted Selling Price, Weight in Gms, Out of Stock and Quantity.
