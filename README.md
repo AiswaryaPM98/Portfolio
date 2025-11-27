@@ -12,11 +12,13 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 ---
 
 ### Table Of Contents
-1. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
+1. Zepto Inventory Analysis 
 
-2. [Marketing AD Campaign Analysis](#marketing-ad-campaign-analysis) - Power BI
+2. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
 
-3. [Movie Analysis](#movie-analysis) - Excel, Power BI 
+3. [Marketing AD Campaign Analysis](#marketing-ad-campaign-analysis) - Power BI
+
+4. [Movie Analysis](#movie-analysis) - Excel, Power BI 
 
 ---
 ### Operation Analytics and Investigating Metric Spike.
