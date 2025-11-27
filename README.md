@@ -12,7 +12,7 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 ---
 
 ### Table Of Contents
-1. [Zepto Inventory Analysis](#Zepto_Inventory_Analysis) - PostgreSQL
+1. [Zepto Inventory Analysis](#Zepto-Inventory-Analysis) - PostgreSQL
 
 2. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
 
