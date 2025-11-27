@@ -1,6 +1,6 @@
 
 # Aiswarya P M
-## Data Analyst
+
 ### About Me
 
 I am Aiswarya P M from Kerala. With a solid educational background in Mathematics, an Operations professional with hands-on experience in process management, data handling, and cross-functional coordination. Currently working in an operations role and actively seeking an opportunity in data analysis to apply analytical skills, problem-solving abilities, and a strong interest in data-driven decision-making.
