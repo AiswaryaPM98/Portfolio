@@ -12,7 +12,7 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 ---
 
 ### Table Of Contents
-1. Zepto Inventory Analysis
+1. [Zepto Inventory Analysis](#Zepto_Inventory_Analysis) - PostgreSQL
 
 2. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
 
@@ -24,6 +24,15 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 
 ### Zepto Inventory Analysis
 
+Zepto Inventory Analysis refers to reviewing and evaluating the stock data of Zepto (a quick-commerce grocery delivery platform) to ensure the right products are available at the right time, in the right quantity. The goal is to reduce stockouts, avoid excess inventory, and improve overall operational efficiency.
+
+Key points in Zepto Inventory Analysis:
+
+Product Availability: Checking which items are in stock, low stock, or out of stock across dark stores.
+Demand Patterns: Understanding which products sell fast, which are slow-moving, and identifying seasonal or daily demand trends.
+Stock Accuracy: Ensuring the inventory in the system matches the actual warehouse stock (important for quick deliveries).
+Price & Margin Check: Verifying MRP, selling price and discounts for each product.
+Duplicate or Incorrect Entries: Fixing cases where products appear multiple times or have wrong prices/quantities.
 
 To Create a new table named Zepto  with columns as sku id(stock keeping unit), Name, Category, MRP, Discount Percentage, Avaliable Quantity, Discounted Selling Price, Weight in Gms, Out of Stock and Quantity.
 
@@ -48,10 +57,78 @@ SELECT COUNT (*) FROM zepto;
 ```
 <img width="277" height="146" alt="image" src="https://github.com/user-attachments/assets/de32fed3-0449-4dfd-91b9-0652f0721b25" />
 
+Here we have total 3731 rows. Here is the sample data from the table -
 
+```
+SELECT * FROM zepto
+LIMIT 10
+```
+<img width="781" height="218" alt="image" src="https://github.com/user-attachments/assets/25d622a5-ef95-49d3-a80a-629fee2cde36" />
 
+Different categories of products mentioned in the table -
+```
+SELECT DISTINCT category FROM zepto
+ORDER BY category;
+```
+<img width="146" height="294" alt="image" src="https://github.com/user-attachments/assets/1a911c6c-0aed-482a-97e1-34278330a815" />
 
+Lets find out product names which are repeated multiple times-
+```
+SELECT NAME, COUNT(sku_id) AS "Number of SKUs"
+FROM zepto
+GROUP BY name
+HAVING COUNT(sku_id)>1
+ORDER BY COUNT(sku_id) DESC;
+```
+<img width="519" height="391" alt="image" src="https://github.com/user-attachments/assets/4bd3570b-d073-4871-837b-0f8fc1ad650b" />
 
+Some products are entered multiple times, which may occur when the same product is listed with different quantities or features.
+
+Now, lets clean the data, Firts of all lokking for any null values-
+
+```
+SELECT * FROM zepto
+WHERE name IS NULL
+OR
+category IS NULL
+OR
+mrp IS NULL
+OR
+discountpercentage IS NULL
+OR
+availablequantity IS NULL
+OR
+discountedsellingprice IS NULL
+OR
+weightingms IS NULL
+OR
+outofstock IS NULL
+OR
+quantity IS NULL;
+```
+<img width="776" height="136" alt="image" src="https://github.com/user-attachments/assets/52810209-f72d-4d27-9033-66716b77cc03" />
+
+There is no null values. Now lets chcek if there is any product with mrp or discounted selling price listed as zero which should never happen.
+
+```
+SELECT * FROM zepto
+WHERE mrp = 0
+OR discountedSellingPrice = 0;
+```
+We have no products with an MRP or discounted selling price of 0. If there is any such entry, we can either delete it or update it with the correct data.
+
+As we check the data, we can see that the MRP and discounted selling price are listed with incorrect decimals. We need to change them to the correct INR amounts.
+
+<img width="800" height="200" alt="image" src="https://github.com/user-attachments/assets/46337144-8ce7-4de3-a495-ae6e5aeff940" />
+
+```
+UPDATE zepto
+SET mrp = mrp/100,
+discountedsellingprice = discountedsellingprice/100;
+```
+<img width="272" height="320" alt="image" src="https://github.com/user-attachments/assets/4f98d087-a69b-4170-b970-709123f4c706" />
+
+We have corected and cleaned the data. Now lets try to answer some business questions.
 
 
 ### Operation Analytics and Investigating Metric Spike.
