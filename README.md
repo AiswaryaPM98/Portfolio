@@ -12,7 +12,7 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 ---
 
 ### Table Of Contents
-1. Zepto Inventory Analysis 
+1. Zepto Inventory Analysis
 
 2. [Operation Analytics and Investigating Metric Spike](#operation-analytics-and-investigating-metric-spike) - MySQL
 
@@ -21,6 +21,33 @@ I am experienced in SQL for data manipulation and analysis, and I am also famili
 4. [Movie Analysis](#movie-analysis) - Excel, Power BI 
 
 ---
+
+### Zepto Inventory Analysis
+
+
+To Create a new table named Zepto  with columns as sku id(stock keeping unit), Name, Category, MRP, Discount Percentage, Avaliable Quantity, Discounted Selling Price, Weight in Gms, Out of Stock and Quantity.
+
+```
+CREATE TABLE Zepto (
+sku_id SERIAL PRIMARY KEY,
+category VARCHAR(50),
+Name VARCHAR(100) not null,
+mrp NUMERIC(8,2),
+discountPercentage NUMERIC(5,2),
+availableQuantity INTEGER,
+discountedSellingPrice NUMERIC(8,2),
+weightInGms INTEGER,
+outofStock BOOLEAN,
+quantity INTEGER
+);
+```
+
+
+
+
+
+
+
 ### Operation Analytics and Investigating Metric Spike.
 
 This project focuses on analyzing the data which is provided by company. My task is to derive insights. So that these insights can be used by ops team, suppoert team, marketing team etc to predict the overall growth or decline of a company.We have 2 cases, Job data and users, evnets, email events tables.
