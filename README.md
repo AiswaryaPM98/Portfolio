@@ -3,11 +3,7 @@
 ## Data Analyst
 ### About Me
 
-I am Aiswarya P M from Kerala. With a solid educational background in Mathematics, complemented by recent hands-on training and certification in Google Data Analytics, I am eager to leverage my skills and experience to contribute to your team and drive business improvement through actionable insights.
-
-During my tenure as a Data Analyst Intern at Titan Tech Emirates Pvt Ltd, I gained practical experience in collecting, cleaning, and analyzing data from diverse sources. I collaborated closely with the data analytics team to conduct exploratory data analysis, develop visualizations, and generate insightful reports for stakeholders. My role also involved interpreting analysis results and providing recommendations to enhance business processes, demonstrating my ability to translate data into valuable insights.
-
-I am experienced in SQL for data manipulation and analysis, and I am also familiar with tools such as Tableau, R, and Power BI, enabling me to effectively analyze and visualize data to drive informed decision-making. My educational background includes a Master's degree in Mathematics and a Bachelor's degree in Mathematics with Statistics, reflecting my commitment to quantitative analysis and data-driven decision-making.
+I am Aiswarya P M from Kerala. With a solid educational background in Mathematics, an Operations professional with hands-on experience in process management, data handling, and cross-functional coordination. Currently working in an operations role and actively seeking an opportunity in data analysis to apply analytical skills, problem-solving abilities, and a strong interest in data-driven decision-making.
 
 ---
 
@@ -37,6 +33,7 @@ Stock Accuracy: Ensuring the inventory in the system matches the actual warehous
 Price & Margin Check: Verifying MRP, selling price and discounts for each product.
 
 Duplicate or Incorrect Entries: Fixing cases where products appear multiple times or have wrong prices/quantities.
+
 
 To Create a new table named Zepto  with columns as sku id(stock keeping unit), Name, Category, MRP, Discount Percentage, Avaliable Quantity, Discounted Selling Price, Weight in Gms, Out of Stock and Quantity.
 
