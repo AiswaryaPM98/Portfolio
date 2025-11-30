@@ -20,20 +20,9 @@ I am Aiswarya P M from Kerala. With a solid educational background in Mathematic
 
 ### Zepto Inventory Analysis.
 
-Zepto Inventory Analysis refers to reviewing and evaluating the stock data of Zepto (a quick-commerce grocery delivery platform) to ensure the right products are available at the right time, in the right quantity. The goal is to reduce stockouts, avoid excess inventory, and improve overall operational efficiency.
+This project involved performing a complete inventory analysis for Zepto, a quick-commerce grocery platform, using SQL. The goal was to study product availability, identify inconsistencies, calculate revenue, analyze discounts, and understand product performance across categories.
 
-Key points in Zepto Inventory Analysis:
-
-Product Availability: Checking which items are in stock, low stock, or out of stock across dark stores.
-
-Demand Patterns: Understanding which products sell fast, which are slow-moving, and identifying seasonal or daily demand trends.
-
-Stock Accuracy: Ensuring the inventory in the system matches the actual warehouse stock.
-
-Price & Margin Check: Verifying MRP, selling price and discounts for each product.
-
-Duplicate or Incorrect Entries: Fixing cases where products appear multiple times or have wrong prices/quantities.
-
+A structured dataset was created containing product information such as SKU ID, category, MRP, discount percentage, stock levels, and weight. The data was explored for duplicates, null values, and incorrect price formats. After cleaning and correcting the data, several business questions were answered using SQL.
 
 To Create a new table named Zepto  with columns as sku id(stock keeping unit), Name, Category, MRP, Discount Percentage, Avaliable Quantity, Discounted Selling Price, Weight in Gms, Out of Stock and Quantity.
 
@@ -85,7 +74,7 @@ ORDER BY COUNT(sku_id) DESC;
 
 Some products are entered multiple times, which may occur when the same product is listed with different quantities or features.
 
-Now, lets clean the data, Firts of all lokking for any null values-
+Now, lets clean the data, First of all lokking for any null values-
 
 ```
 SELECT * FROM zepto
@@ -131,7 +120,164 @@ discountedsellingprice = discountedsellingprice/100;
 
 We have corected and cleaned the data. Now lets try to answer some business questions.
 
+Now lets try to answer some business questions.
 
+Q1: The top 10 best value products based on the discount percentage.
+
+```
+SELECT DISTINCT name, mrp, discountpercentage from zepto
+ORDER BY discountpercentage DESC 
+limit 10;
+```
+<img width="470" height="265" alt="image" src="https://github.com/user-attachments/assets/00ceeb78-40a8-47ca-8e78-55f9e6322649" />
+
+This will help us identify which products are heavily promoted. To find the least promoted products, we can use the SQL query below.
+
+```
+SELECT DISTINCT name, mrp, discountpercentage from zepto
+WHERE discountpercentage=0
+ORDER BY mrp DESC;
+```
+<img width="547" height="392" alt="image" src="https://github.com/user-attachments/assets/3f2049c4-c67a-4592-a00c-6026ce43b61b" />
+
+This will give us the products with no discounts applied. These 535 products may be the best-selling essential items, which is why no discount was offered.
+
+Q2: Which are the products with high mrp which are out of stock?
+
+If there are any such products, it would result in a loss of revenue if we don’t restock them.
+
+Lets find the total out of products -
+
+```
+SELECT DISTINCT name, mrp FROM zepto
+WHERE outofstock= true
+ORDER BY mrp DESC;
+```
+<img width="401" height="373" alt="image" src="https://github.com/user-attachments/assets/9ca3f205-6923-4be8-a406-4c5d1e433148" />
+
+Lets find the number of products with mrp>300 which are outofstock -
+
+```
+SELECT DISTINCT name, mrp FROM zepto
+WHERE outofstock= true
+AND mrp > 300
+ORDER BY mrp DESC;
+```
+<img width="362" height="175" alt="image" src="https://github.com/user-attachments/assets/46e90d24-090d-4874-ba35-efa21a486e6e" />
+
+We have a total of 216 products that are out of stock, and among them, 4 products have an MRP greater than ₹300.
+
+Q3: Calculate each category Revenue.
+
+To calulate the category revenue we using the SUM formula 
+```
+SELECT category,
+SUM(discountedsellingprice*availablequantity) as Total_Revenue
+FROM zepto
+group by category
+ORDER BY Total_Revenue DESC;
+```
+<img width="227" height="349" alt="image" src="https://github.com/user-attachments/assets/ca04f3df-1975-41c7-bcad-b0e4a2428683" />
+
+There are 14 product categories, and cooking essentials and munchies generate the highest revenue. Fruits and vegetables have the lowest revenue.
+
+Let's find the products with an MRP greater than ₹300 in the cooking essentials category.
+
+```
+SELECT DISTINCT name, mrp, discountpercentage FROM zepto
+WHERE category = 'Cooking Essentials' 
+AND mrp >300
+ORDER BY mrp DESC;
+```
+
+<img width="425" height="389" alt="image" src="https://github.com/user-attachments/assets/e8ac42c5-ab8c-4cb7-82bd-c7e7bba891a6" />
+
+We have 55 products with an MRP greater than ₹300, which make up a significant portion of the revenue in the cooking essentials category.
+
+Q4: Find all product where mrp is greater than 500 and discount is less than 10%.
+
+```
+SELECT DISTINCT name, mrp, discountpercentage FROM zepto
+WHERE mrp > 500
+AND discountpercentage < 10
+ORDER BY mrp DESC ;
+```
+<img width="539" height="374" alt="image" src="https://github.com/user-attachments/assets/b2fee0a1-41c7-47d0-b7d4-93e7cb603b4e" />
+
+There are 39 products that are not premium but are well-known and will sell even without discounts or with minimal discounts.
+
+Q5: Identify the average discount percentage offered by each category.
+
+```
+SELECT category,
+ROUND(AVG(discountpercentage),2) AS Avg_Discount
+FROM zepto
+GROUP BY category
+ORDER BY  Avg_Discount DESC;
+```
+<img width="221" height="341" alt="image" src="https://github.com/user-attachments/assets/2c50f273-39a9-433d-b825-2ba7b64643ff" />
+
+Fruits and vegetables have the highest average discount, yet they generate the least revenue. The team should investigate why this category has collected such low revenue even after offering discounts.
+
+Q6: Find price per gram for product above 100g and sort by best value.
+
+```
+SELECT DISTINCT name, weightingms, discountedsellingprice,
+ROUND((discountedsellingprice/weightingms),2) AS Price_Per_Gram
+FROM zepto
+WHERE weightingms > 100
+ORDER BY Price_Per_Gram;
+```
+<img width="661" height="396" alt="image" src="https://github.com/user-attachments/assets/d8e95048-cfe1-4e8c-a399-06d4f80bb9d2" />
+
+There are 1,239 products that weigh more than 100 grams. The price per gram will help customers identify the best-value products and also support internal pricing and strategy decisions.
+
+Q7: Calculate total inventory weight per category
+
+```
+SELECT category,
+SUM(weightingms*availablequantity/1000) AS Total_Weight_in_KG
+FROM zepto
+GROUP BY category
+ORDER BY Total_Weight_in_KG DESC;
+```
+<img width="242" height="365" alt="image" src="https://github.com/user-attachments/assets/ca2563e4-021c-475a-b360-27865d3200d8" />
+
+This helps in warehouse planning and in identifying bulky categories.
+
+#### Key Learnings from the project:-
+
+1. Data Cleaning & Validation
+Understood how to detect duplicates, missing values, and impossible values like MRP = 0.
+Corrected price formatting errors by adjusting decimal values.
+Identified repeated product entries and learned why they occur.
+
+2. Importance of Stock Accuracy
+Analysed out-of-stock products and highlighted revenue risks when high-value items are unavailable.
+Understood the impact of accurate inventory tracking on customer experience and sales.
+
+3. Insights from Discount Analysis
+Identified products with the highest discounts to understand promotional strategies.
+Found products with zero discounts, indicating essential or high-demand items.
+Observed that fruits and vegetables have the highest average discount but lowest revenue—indicating inefficiency in marketing or strategy.
+
+4. Revenue Calculation & Category Performance
+Calculated total revenue by category using selling price and available quantity.
+Identified strong revenue-generating categories (cooking essentials, munchies).
+Detected underperforming categories to guide business decisions.
+
+5. Price–Value Understanding
+Computed price per gram to understand value efficiency, helping in pricing strategy.
+Useful for customers, pricing teams, and competitive analysis.
+
+6. Inventory Planning & Operations Insights
+Calculated total inventory weight per category for warehouse planning.
+Identified bulky categories that require more storage and handling effort.
+
+The analysis revealed patterns in stock availability, top-selling categories, heavily promoted products, least-promoted products, and out-of-stock high-value items. Category-level revenue was calculated, showing that cooking essentials and munchies generate the highest revenue, while fruits and vegetables perform poorly despite having the highest discounts. Metrics such as price per gram and total inventory weight were also derived to support pricing and warehouse planning decisions.
+
+
+---
 ### Operation Analytics and Investigating Metric Spike.
 
 This project focuses on analyzing the data which is provided by company. My task is to derive insights. So that these insights can be used by ops team, suppoert team, marketing team etc to predict the overall growth or decline of a company.We have 2 cases, Job data and users, evnets, email events tables.
@@ -385,6 +531,7 @@ order by 1;
 
 This project helped me to understand the importance of operation analytics. I am able to understand how companies use the metric spike to leverage insights to make data driven decisions.
 
+
 ---
 ### Marketing AD Campaign Analysis
 This is a project that I worked on as part of internship. Here we have data of various advertisement campaign the company did for the clients. As a part of digital marketing the data includes the cities, device used, clicks, impression, click through rate (CTR), average cost per click (CPC), conversions, cost per conversion, conversion rate and Absolute top impression. I was assigned to analyse the data and create a dashboard. Here I used Power Bi for analysis.
@@ -455,6 +602,7 @@ Quality of the film matters more than anything no matter how much the budget is.
 In this project I learnt advanced function of excel to analyse this data and used power bi to visualise thefindings more effectively.
 
 Thank You.
+
 
 ---
 
