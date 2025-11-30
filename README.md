@@ -122,7 +122,7 @@ We have corected and cleaned the data. Now lets try to answer some business ques
 
 Now lets try to answer some business questions.
 
-Q1: The top 10 best value products based on the discount percentage.
+#### Q1: The top 10 best value products based on the discount percentage.
 
 ```
 SELECT DISTINCT name, mrp, discountpercentage from zepto
@@ -142,7 +142,7 @@ ORDER BY mrp DESC;
 
 This will give us the products with no discounts applied. These 535 products may be the best-selling essential items, which is why no discount was offered.
 
-Q2: Which are the products with high mrp which are out of stock?
+#### Q2: Which are the products with high mrp which are out of stock?
 
 If there are any such products, it would result in a loss of revenue if we don’t restock them.
 
@@ -167,7 +167,7 @@ ORDER BY mrp DESC;
 
 We have a total of 216 products that are out of stock, and among them, 4 products have an MRP greater than ₹300.
 
-Q3: Calculate each category Revenue.
+#### Q3: Calculate each category Revenue.
 
 To calulate the category revenue we using the SUM formula 
 ```
@@ -194,7 +194,7 @@ ORDER BY mrp DESC;
 
 We have 55 products with an MRP greater than ₹300, which make up a significant portion of the revenue in the cooking essentials category.
 
-Q4: Find all product where mrp is greater than 500 and discount is less than 10%.
+#### Q4: Find all product where mrp is greater than 500 and discount is less than 10%.
 
 ```
 SELECT DISTINCT name, mrp, discountpercentage FROM zepto
@@ -206,7 +206,7 @@ ORDER BY mrp DESC ;
 
 There are 39 products that are not premium but are well-known and will sell even without discounts or with minimal discounts.
 
-Q5: Identify the average discount percentage offered by each category.
+#### Q5: Identify the average discount percentage offered by each category.
 
 ```
 SELECT category,
@@ -219,7 +219,7 @@ ORDER BY  Avg_Discount DESC;
 
 Fruits and vegetables have the highest average discount, yet they generate the least revenue. The team should investigate why this category has collected such low revenue even after offering discounts.
 
-Q6: Find price per gram for product above 100g and sort by best value.
+#### Q6: Find price per gram for product above 100g and sort by best value.
 
 ```
 SELECT DISTINCT name, weightingms, discountedsellingprice,
@@ -232,7 +232,7 @@ ORDER BY Price_Per_Gram;
 
 There are 1,239 products that weigh more than 100 grams. The price per gram will help customers identify the best-value products and also support internal pricing and strategy decisions.
 
-Q7: Calculate total inventory weight per category
+#### Q7: Calculate total inventory weight per category
 
 ```
 SELECT category,
